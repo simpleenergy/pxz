@@ -1,0 +1,11 @@
+Source: pxz
+Maintainer: Derek Chen-Becker <derek@simpleenergy.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: liblzma-dev (>= 5.1)
+
+Package: pxz
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Parallel implementation of the xz compression utility, taken from https://github.com/jnovy/pxz
