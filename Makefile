@@ -45,3 +45,6 @@ time: $(NAME)
 
 valgrind: $(NAME)
 	valgrind -v --tool=memcheck --leak-check=yes $(EXECUTE)
+
+debs: all
+	fakeroot ./rules
