@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+OUTPUT=packages
+
+build: clean build-stamp binary
+
+build-stamp:
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -rf build-stamp DEBIAN
+	dh_clean
+	rm -rf debian/tmp*
+
+binary: prep
+	dh_install pxz usr/local/bin/
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb --destdir=$(OUTPUT)
+
+prep:
+	dh_testdir
+	dh_testroot
+	dh_prep
+	mkdir -p $(OUTPUT)

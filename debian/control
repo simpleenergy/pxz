@@ -7,5 +7,5 @@ Build-Depends: liblzma-dev (>= 5.1)
 
 Package: pxz
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: liblzma5
 Description: Parallel implementation of the xz compression utility, taken from https://github.com/jnovy/pxz

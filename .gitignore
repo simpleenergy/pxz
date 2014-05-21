@@ -1,5 +1,7 @@
 *~
 pxz
 
+build-stamp
 debian/files
 debian/pxz*
+packages/
